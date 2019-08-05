@@ -4,26 +4,21 @@ namespace Vyacheslav;
 
 function isBalanced(string $pairs): bool
 {
-
-    if (!preg_match('#^[()]+$#', $pairs)) {
-        return false;
-    }
-
-    $leftBracket = 0;
-    $rightBracket = 0;
+    $countOfLeftBracket = 0;
+    $countOfRightBracket = 0;
 
     for ($i = 0; $i < strlen($pairs); $i++) {
         if ($pairs[$i] === '(') {
-            $leftBracket++;
+            $countOfLeftBracket++;
         } else {
-            $rightBracket++;
-            if ($rightBracket > $leftBracket) {
+            $countOfRightBracket++;
+            if ($countOfRightBracket > $countOfLeftBracket) {
                 return false;
             }
         }
     }
 
-    if ($leftBracket !== $rightBracket) {
+    if ($countOfLeftBracket !== $countOfRightBracket) {
         return false;
     }
 
