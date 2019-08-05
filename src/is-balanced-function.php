@@ -1,6 +1,6 @@
 <?php
 
-namespace Vyacheslav;
+namespace BalanceChecker;
 
 function isBalanced(string $pairs): bool
 {

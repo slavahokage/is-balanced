@@ -18,7 +18,7 @@
       "src/is-balanced-cli.php"
     ],
     "psr-4": {
-      "Vyacheslav\\": "src/"
+      "BalanceChecker\\": "src/"
     }
   }
 }

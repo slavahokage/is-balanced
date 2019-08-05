@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-namespace Vyacheslav;
+namespace BalanceChecker;
 
 require_once('../vendor/autoload.php');
 
