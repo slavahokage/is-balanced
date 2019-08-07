@@ -15,7 +15,7 @@
   "autoload": {
     "files": [
       "src/is-balanced-function.php",
-      "src/is-balanced-cli.php"
+      "bin/is-balanced-cli.php"
     ],
     "psr-4": {
       "BalanceChecker\\": "src/"
