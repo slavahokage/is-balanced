@@ -10,16 +10,12 @@ function isBalanced(string $pairs): bool
     for ($i = 0; $i < strlen($pairs); $i++) {
         if ($pairs[$i] === '(') {
             $countOfLeftBracket++;
-        } else {
+        } else if ($pairs[$i] === ')') {
             $countOfRightBracket++;
             if ($countOfRightBracket > $countOfLeftBracket) {
                 return false;
             }
         }
-    }
-
-    if ($countOfLeftBracket !== $countOfRightBracket) {
-        return false;
     }
 
     return true;
