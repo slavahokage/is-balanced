@@ -4,18 +4,22 @@ namespace BalanceChecker;
 
 function isBalanced(string $pairs): bool
 {
-    $countOfLeftBracket = 0;
-    $countOfRightBracket = 0;
+    $countOfDifferentBrackets = [];
 
     for ($i = 0; $i < strlen($pairs); $i++) {
         if ($pairs[$i] === '(') {
-            $countOfLeftBracket++;
+            array_push($countOfDifferentBrackets, 1);
         } else if ($pairs[$i] === ')') {
-            $countOfRightBracket++;
-            if ($countOfRightBracket > $countOfLeftBracket) {
+            $item = array_pop($countOfDifferentBrackets);
+
+            if (is_null($item)) {
                 return false;
             }
         }
+    }
+
+    if (!empty($countOfDifferentBrackets)) {
+        return false;
     }
 
     return true;
