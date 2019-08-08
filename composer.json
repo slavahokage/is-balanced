@@ -1,0 +1,24 @@
+{
+  "name": "vyacheslav/is-balanced-function",
+  "type": "library",
+  "description": "isBalanced is a function that check if input string has balanced square brackets",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "slavahokage",
+      "email": "slava123smirnov@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "files": [
+      "src/is-balanced-function.php",
+      "bin/is-balanced-cli.php"
+    ],
+    "psr-4": {
+      "BalanceChecker\\": "src/"
+    }
+  }
+}
