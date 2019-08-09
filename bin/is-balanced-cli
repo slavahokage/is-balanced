@@ -1,8 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-use function BalanceChecker\isBalanced;
-
 if (file_exists('../vendor/autoload.php')) {
     require_once('../vendor/autoload.php');
 } else {
@@ -12,6 +10,5 @@ if (file_exists('../vendor/autoload.php')) {
 $firstArgumentOfScript = $line = trim(fgets(STDIN));
 
 if (isset($firstArgumentOfScript)) {
-    echo isBalanced($firstArgumentOfScript);
-    exit();
+    echo BalanceChecker\isBalanced($firstArgumentOfScript);
 }
