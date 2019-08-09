@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+if (file_exists('../vendor/autoload.php')) {
+    require_once('../vendor/autoload.php');
+} else {
+    require_once('../../../autoload.php');
+}
+
+$firstArgumentOfScript = $line = trim(fgets(STDIN));
+
+if (isset($firstArgumentOfScript)) {
+    echo BalanceChecker\isBalanced($firstArgumentOfScript);
+}
