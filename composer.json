@@ -10,7 +10,8 @@
     }
   ],
   "require": {
-    "php": ">=7.0.0"
+    "php": ">=7.0.0",
+    "squizlabs/php_codesniffer": "*"
   },
   "autoload": {
     "files": [
@@ -20,5 +21,8 @@
     "psr-4": {
       "BalanceChecker\\": "src/"
     }
+  },
+  "scripts": {
+    "check-standards": "phpcs --standard=PSR1,PSR2 ./src"
   }
 }
